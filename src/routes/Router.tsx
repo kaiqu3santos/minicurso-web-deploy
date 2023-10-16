@@ -8,26 +8,12 @@ import {RoutersPathName} from "@/routes/schemas.ts";
 export const Router: any = () => {
     return (
         <Routes>
+
             <Route
-                path={RoutersPathName.Login}
-                element={<Login/>}
+                element={<Home/>}
+                path="/minicurso-web-deploy*"
             />
 
-            <Route
-                path="/"
-                element={
-                    <RequireAuth>
-                        <Layout/>
-                    </RequireAuth>
-                }
-            >
-                <Route
-                    path={RoutersPathName.Home}
-                    element={<Home/>}
-                />
-
-
-            </Route>
         </Routes>
     )
 }
